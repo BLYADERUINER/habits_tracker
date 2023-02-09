@@ -1,0 +1,10 @@
+$backgroundColor: #F3F6FD;
+
+
+.page {
+    position: relative;
+    background: $backgroundColor;
+    max-width: 1920px;
+    min-width: 320px;
+    min-height: 100vh;
+}
