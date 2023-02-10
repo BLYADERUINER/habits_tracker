@@ -1,14 +1,69 @@
 @import '../../vendor/normalize.css';
 @import '../../vendor/fonts/comfortaa.css';
-.app__footer, .app__main, .app__header, .app {
+.app__footer, .app__main, .app__header, .app, .menu__icon, .menu__button-item, .menu__button-add {
   margin: 0;
   padding: 0;
+}
+
+.menu__navigation, .menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu__button-item, .menu__button-add {
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
 .menu {
   background-color: #FBFAFF;
   min-height: 100vh;
   padding: 30px;
+}
+
+.menu__button-add {
+  border: 1px solid #CAD5FF;
+  background: none;
+}
+
+.menu__button-add:hover {
+  background: #EFF2FF;
+}
+
+.menu__button-item {
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  box-sizing: border-box;
+}
+
+.menu__button-item:hover {
+  background: #6A6AFB;
+}
+
+.menu__button-item:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.menu__button-item_active {
+  background: #5051F9;
+}
+
+.menu__button-item_active img {
+  filter: brightness(0) invert(1);
+}
+
+.menu__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.menu__logo {
+  margin-bottom: 50px;
 }
 
 .app {

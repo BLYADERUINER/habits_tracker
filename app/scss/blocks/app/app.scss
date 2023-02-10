@@ -4,7 +4,7 @@
   background: $background-color;
   max-width: 1920px;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: $min-height;
 
   @extend %extend-margins;
 }

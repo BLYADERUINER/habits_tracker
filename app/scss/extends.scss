@@ -3,3 +3,18 @@
   padding: 0;
 }
 
+
+%extend-navigation-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+
+%extend-menu-buttons {
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
