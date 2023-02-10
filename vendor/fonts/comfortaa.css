@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Comfortaa';
+	font-weight: 1;
+	font-style: normal;
+  src: url('./Comfortaa-Regular.woff2') format('woff2'), url('./Comfortaa-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Comfortaa';
+	font-weight: 300;
+	font-style: normal;
+  src: url('./Comfortaa-Light.woff2') format('woff2'), url('./Comfortaa-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'Comfortaa';
+	font-weight: 400;
+	font-style: normal;
+  src: url('./Comfortaa-Regular.woff2') format('woff2'), url('./Comfortaa-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Comfortaa';
+	font-weight: 500;
+	font-style: normal;
+  src: url('./Comfortaa-Medium.woff2') format('woff2'), url('./Comfortaa-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Comfortaa';
+	font-weight: 600;
+	font-style: normal;
+  src: url('./Comfortaa-SemiBold.woff2') format('woff2'), url('./Comfortaa-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Comfortaa';
+	font-weight: 700;
+	font-style: normal;
+  src: url('./Comfortaa-Bold.woff2') format('woff2'), url('./Comfortaa-Bold.woff') format('woff');
+}

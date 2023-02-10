@@ -8,14 +8,30 @@
     <link href="./styles/style.css" rel="stylesheet" />
   </head>
   <body class="page">
+
+    <div class="menu page__menu">
+      <img class="menu__logo" src="./image/logo.svg" alt="Логотип Habits tracker"/>
+      <nav class="menu__navigation">
+        <div class="menu__list">
+          <button class="menu__button-item">
+            <img class="menu__icon" src="./image/Water.svg" alt="Иконка Привычки Вода">
+          </button>
+        </div>
+        <button class="menu__button-add">
+          <img class="menu__icon" src="./image/Add.svg" alt="Иконка Добавления Привычки">
+        </button>
+      </nav>
+    </div>
+
     <header class="header page__header">
-      <h1 class="header__title"></h1>
+      <h1 class="header__title">Отжимания</h1>
       <div class="header__container">
-        <h3 class="header__text"></h3>
+        <h3 class="header__text">Прогресс</h3>
         <p class="header__status"></p>
         <div class="header__line"></div>
       </div>
     </header>
+
     <main class="main page__main">
       <section class="tracker main__tracker">
         <ul class="tracker__list">
@@ -24,7 +40,7 @@
         </ul>
       </section>
     </main>
+
     <footer class="footer page footer"></footer>
-    <div class="menu page__menu"></div>
   </body>
 </html>

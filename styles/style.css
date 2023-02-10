@@ -1,9 +1,33 @@
+@import '../../vendor/normalize.css';
+@import '../../vendor/fonts/comfortaa.css';
+.page__footer, .page__main, .page__header, .page {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background-color: #FBFAFF;
+  min-height: 100vh;
+}
+
 .page {
+  display: flex;
   position: relative;
   background: #F3F6FD;
   max-width: 1920px;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.header__title {
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=style.css.map */
