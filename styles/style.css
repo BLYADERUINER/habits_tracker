@@ -1,6 +1,6 @@
 @import '../../vendor/normalize.css';
 @import '../../vendor/fonts/comfortaa.css';
-.page__footer, .page__main, .page__header, .page {
+.app__footer, .app__main, .app__header, .app {
   margin: 0;
   padding: 0;
 }
@@ -8,9 +8,10 @@
 .menu {
   background-color: #FBFAFF;
   min-height: 100vh;
+  padding: 30px;
 }
 
-.page {
+.app {
   display: flex;
   position: relative;
   background: #F3F6FD;

@@ -1,0 +1,31 @@
+@import '../../vendor/normalize.css';
+@import '../../vendor/fonts/comfortaa.css';
+
+// SCSS
+@import './variablese';
+@import './extends';
+
+// block Menu
+@import './blocks/menu/menu';
+@import './blocks/menu/__button-add/menu__button-add';
+@import './blocks/menu/__button-item/menu__button-item';
+@import './blocks/menu/__icon/menu__icon';
+@import './blocks/menu/__list/menu__list';
+@import './blocks/menu/__logo/menu__logo';
+@import './blocks/menu/__navigation/menu__navigation';
+@import './blocks/menu/__title/menu__title';
+
+
+// block App
+@import './blocks/app/app.scss';
+@import './blocks/app/__header/app__header';
+@import './blocks/app/__main/app__main';
+@import './blocks/app/__footer/app__footer';
+
+
+@import './blocks/header/__title/header__title';
+
+
+* {
+  box-sizing: border-box;
+}
