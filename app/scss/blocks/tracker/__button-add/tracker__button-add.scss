@@ -1,0 +1,13 @@
+.tracker__button-add {
+  background-color: #EDECFE;
+  color: $color-blue;
+  border-radius: 10px;
+  width: 120px;
+
+  @extend %extend-button-default;
+  @extend %extend-margins;
+}
+
+.tracker__button-add:hover {
+  opacity: 0.8;
+}

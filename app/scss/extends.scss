@@ -16,7 +16,6 @@
   border-radius: 15px;
   width: 60px;
   height: 60px;
-  cursor: pointer;
 }
 
 
@@ -26,8 +25,9 @@
 }
 
 
-%extend-app-minWidth {
-  min-width: 1700px;
+%extend-button-default {
+  border: none;
+  cursor: pointer;
 }
 
 

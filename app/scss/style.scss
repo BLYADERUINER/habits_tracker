@@ -19,9 +19,14 @@
 
 // block App
 @import './blocks/app/app.scss';
-@import './blocks/app/__header/app__header';
-@import './blocks/app/__main/app__main';
-@import './blocks/app/__footer/app__footer';
+@import './blocks/app/__content/app__content';
+@import './blocks/app/__menu/app__menu';
+
+// block Content
+@import './blocks/content/content';
+@import './blocks/content/__footer/content__footer';
+@import './blocks/content/__header/content__header';
+@import './blocks/content/__main/content__main';
 
 // block Header
 @import './blocks/header/header';
@@ -32,6 +37,20 @@
 @import './blocks/header/__text/header__text';
 @import './blocks/header/__line/header__line';
 @import './blocks/header/__line/_active/header__line_active';
+
+// block Main
+@import './blocks/main/main';
+
+// block Tracker
+@import './blocks/tracker/tracker';
+@import './blocks/tracker/__button-delete/tracker__button-delete';
+@import './blocks/tracker/__button-add/tracker__button-add';
+@import './blocks/tracker/__day/tracker__day';
+@import './blocks/tracker/__item/tracker__item';
+@import './blocks/tracker/__list/tracker__list';
+@import './blocks/tracker/__text/tracker__text';
+@import './blocks/tracker/__form/tracker__form';
+@import './blocks/tracker/__input/tracker__input';
 
 
 * {

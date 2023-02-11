@@ -1,6 +1,6 @@
-.app__header {
+.content {
   padding: 55px 150px;
+  min-width: 1700px;
 
   @extend %extend-margins;
-  @extend %extend-app-minWidth;
 }

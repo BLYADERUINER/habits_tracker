@@ -1,0 +1,7 @@
+.tracker__form {
+  display: flex;
+  justify-content: space-between;
+  width: 1250px;
+
+  @extend %extend-margins;
+}

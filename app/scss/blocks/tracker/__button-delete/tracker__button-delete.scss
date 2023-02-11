@@ -1,0 +1,14 @@
+.tracker__button-delete {
+  background-image: url(../../../../../image/delete.svg);
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: 20px;
+
+  @extend %extend-button-default;
+}
+
+.tracker__button-delete:hover {
+  opacity: 0.6;
+}

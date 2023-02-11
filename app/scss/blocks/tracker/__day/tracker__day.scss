@@ -1,0 +1,17 @@
+.tracker__day {
+  font-family: $font-size-default;
+  color: $color-white;
+  background-color: $color-blue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid $color-blue;
+  text-align: center;
+  width: 130px;
+  height: 50px;
+  padding-top: 15px;
+
+  @extend %extend-margins;
+}

@@ -4,6 +4,7 @@
 
   @extend %extend-margins;
   @extend %extend-menu-buttons;
+  @extend %extend-button-default;
 }
 
 .menu__button-add:hover {

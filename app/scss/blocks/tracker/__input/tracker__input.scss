@@ -1,0 +1,14 @@
+.tracker__input {
+  font-family: $font-size-default;
+  color: $color-default;
+  background: #ffffff;
+  border: 1px solid #e7ebfb;
+  border-radius: 9px;
+  outline-color: #7171eb;
+  width: 100%;
+  padding: 9px;
+  margin-left: 35px;
+  margin-right: 30px;
+
+  @extend %extend-margins;
+}
