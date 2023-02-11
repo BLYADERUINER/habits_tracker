@@ -18,3 +18,16 @@
   height: 60px;
   cursor: pointer;
 }
+
+
+%extend-header-line {
+  height: 5px;
+  border-radius: 4px;
+}
+
+
+%extend-app-minWidth {
+  min-width: 1700px;
+}
+
+

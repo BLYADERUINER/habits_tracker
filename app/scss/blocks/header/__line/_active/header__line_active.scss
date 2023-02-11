@@ -1,0 +1,7 @@
+.header__line_active {
+  position: absolute;
+  width: 80%;
+  background: $color-blue;
+
+  @extend %extend-header-line;
+}

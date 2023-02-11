@@ -23,8 +23,15 @@
 @import './blocks/app/__main/app__main';
 @import './blocks/app/__footer/app__footer';
 
-
+// block Header
+@import './blocks/header/header';
 @import './blocks/header/__title/header__title';
+@import './blocks/header/__container/header__container';
+@import './blocks/header/__container-text/header__container-text';
+@import './blocks/header/__status/header__status';
+@import './blocks/header/__text/header__text';
+@import './blocks/header/__line/header__line';
+@import './blocks/header/__line/_active/header__line_active';
 
 
 * {

@@ -1,0 +1,8 @@
+.header__container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 235px;
+
+  @extend %extend-margins;
+}

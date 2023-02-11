@@ -1,0 +1,7 @@
+.header__line {
+  position: relative;
+  width: 100%;
+  background: #e6e9ed;
+
+  @extend %extend-header-line;
+}

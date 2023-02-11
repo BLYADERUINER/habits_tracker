@@ -1,6 +1,6 @@
 @import '../../vendor/normalize.css';
 @import '../../vendor/fonts/comfortaa.css';
-.app__footer, .app__main, .app__header, .app, .menu__icon, .menu__button-item, .menu__button-add {
+.header__text, .header__status, .header__container, .header__title, .app__footer, .app__main, .app__header, .app, .menu__icon, .menu__button-item, .menu__button-add {
   margin: 0;
   padding: 0;
 }
@@ -17,6 +17,15 @@
   width: 60px;
   height: 60px;
   cursor: pointer;
+}
+
+.header__line_active, .header__line {
+  height: 5px;
+  border-radius: 4px;
+}
+
+.app__header {
+  min-width: 1700px;
 }
 
 .menu {
@@ -75,11 +84,63 @@
   min-height: 100vh;
 }
 
+.app__header {
+  padding: 55px 150px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header__title {
   font-family: "Comfortaa", Arial, sans-serif;
+  color: #000000;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 235px;
+}
+
+.header__container-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__status {
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #768396;
+}
+
+.header__text {
+  font-family: "Comfortaa", Arial, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.header__line {
+  position: relative;
+  width: 100%;
+  background: #e6e9ed;
+}
+
+.header__line_active {
+  position: absolute;
+  width: 80%;
+  background: #5051F9;
 }
 
 * {
