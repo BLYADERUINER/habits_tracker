@@ -16,7 +16,7 @@
       />
       <nav class="menu__navigation">
         <div class="menu__list">
-          <button class="menu__button-item menu__button-item_active">
+          <!-- <button class="menu__button-item menu__button-item_active" menuId = "1">
             <img
               class="menu__icon"
               src="./image/Dumbbell.svg"
@@ -36,7 +36,7 @@
               src="./image/Food.svg"
               alt="Иконка Привычки Еда"
             />
-          </button>
+          </button> -->
         </div>
         <button class="menu__button-add">
           <img
@@ -49,38 +49,38 @@
     </div>
     <div class="content app_content">
       <header class="header app__header">
-        <h1 class="header__title">Отжимания</h1>
+        <h1 class="header__title">-</h1>
         <div class="header__container">
           <div class="header__container-text">
             <h3 class="header__text">Прогресс</h3>
-            <p class="header__status">80%</p>
+            <p class="header__status">%</p>
           </div>
           <div class="header__line">
             <div class="header__line_active"></div>
           </div>
         </div>
       </header>
-
       <main class="main app__main">
         <section class="tracker main__tracker">
           <ul class="tracker__list">
-            <li class="tracker__item">
+            <!-- <li class="tracker__item">
               <h2 class="tracker__day">День 1</h2>
               <p class="tracker__text">Первый подход всегда даётся тяжело</p>
               <button class="tracker__button-delete"></button>
-            </li>
-            <li class="tracker__item">
-              <h2 class="tracker__day">День 2</h2>
-              <form class="tracker__form">
-                <input class="tracker__input" type="text" placeholder="Комментарий">
-                <button class="tracker__button-add">Добавить</button>
-              </form>
-            </li>
+            </li> -->
           </ul>
+          <div class="tracker__item tracker__day-next">
+            <h2 class="tracker__day"></h2>
+            <form class="tracker__form">
+              <input class="tracker__input" type="text" placeholder="Комментарий">
+              <button class="tracker__button-add">Добавить</button>
+            </form>
+          </div>
         </section>
       </main>
 
       <footer class="footer app__footer"></footer>
     </div>
+    <script src="./app/scripts/main.js" type="module"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 .header__line_active {
   position: absolute;
-  width: 80%;
   background: $color-blue;
+  transition: all 0.5s;
 
   @extend %extend-header-line;
 }
