@@ -3,6 +3,10 @@ const HABBIT_KEY = 'HABBIT_KEY';
 let habbits = [];
 
 const nextDay = document.querySelector('.tracker__day-next');
+const habbitForm = document.querySelector('.tracker__form');
+const addButtonDays = habbitForm.querySelector('.tracker__button-add');
+let activeElement;
+
 
 const page = {
   menu: document.querySelector('.menu__list'),
@@ -92,12 +96,15 @@ const renderContent = (activeHabbit) => {
       page.content.daysContainer.appendChild(element);
   };
 
-  page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`
+  page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
+
+
 };
 
 
 
 const rerender = (activeHabbitId) => {
+  activeElement = activeHabbitId;
   const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
 
   if (!activeHabbit) {
@@ -110,6 +117,37 @@ const rerender = (activeHabbitId) => {
 };
 
 
+
+const addDays = (event) => {
+  const data = new FormData(event.target);
+  const comment = data.get('comment');
+
+  event.target['comment'].classList.remove('tracker__input_error');
+
+  if (!comment) {
+    event.target['comment'].classList.add('tracker__input_error');
+  }
+
+  habbits = habbits.map(item => {
+    if (item.id === activeElement) {
+      return {
+        ...item,
+        days: item.days.concat([{ comment }])
+      }
+    }
+    return item;
+  });
+  rerender(activeElement);
+  event.target.reset();
+  saveData();
+};
+
+
+habbitForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  addDays(event);
+});
 
 
 (() => {
