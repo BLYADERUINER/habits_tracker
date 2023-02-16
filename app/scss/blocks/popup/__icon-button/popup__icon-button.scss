@@ -1,0 +1,20 @@
+.popup__icon-button {
+  border-radius: 14px;
+  border: 1px solid $color-blue;
+  width: 55px;
+  height: 55px;
+
+
+  @extend %extend-margins;
+  @extend %extend-button-default
+}
+
+
+.popup__icon-button:hover {
+  background: #6A6AFB;
+}
+
+
+.popup__icon-button:hover img {
+  filter: brightness(0) invert(1);
+}

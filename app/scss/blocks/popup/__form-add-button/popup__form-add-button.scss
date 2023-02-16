@@ -1,0 +1,15 @@
+.popup__form-add-button {
+  font-family: $font-size-default;
+  background: $color-light-purple;
+  color: $color-blue;
+  border-radius: 9px;
+  width: 120px;
+  height: 45px;
+
+  @extend %extend-button-default;
+}
+
+.popup__form-add-button:hover {
+  opacity: 0.8;
+  border: 1px solid #cbcfdd;
+}

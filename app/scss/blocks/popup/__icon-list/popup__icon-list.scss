@@ -1,0 +1,7 @@
+.popup__icon-list {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+
+  @extend %extend-margins;
+}

@@ -1,0 +1,7 @@
+.popup__icon-button_active {
+  background: $color-blue;
+}
+
+.popup__icon-button_active img {
+  filter: brightness(0) invert(1);
+}

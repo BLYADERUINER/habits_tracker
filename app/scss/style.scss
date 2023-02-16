@@ -55,6 +55,22 @@
 @import './blocks/tracker/__input/_error/tracker__input_error';
 
 
+// block Popup
+@import './blocks/popup/popup.scss';
+@import './blocks/popup/__container/popup__container';
+@import './blocks/popup/__form-add-button/popup__form-add-button';
+@import './blocks/popup/__form/popup__form';
+@import './blocks/popup/__icon-button/popup__icon-button';
+@import './blocks/popup/__icon-lable/popup__icon-lable';
+@import './blocks/popup/__icon-list/popup__icon-list';
+@import './blocks/popup/__icon/popup__icon';
+@import './blocks/popup/__input/popup__input';
+@import './blocks/popup/__title/popup__title';
+@import './blocks/popup/_active/popup_active';
+@import './blocks/popup/__button-close/popup__button-close';
+@import './blocks/popup/__icon-button/_active/popup__icon-button_active';
+
+
 * {
   box-sizing: border-box;
 }

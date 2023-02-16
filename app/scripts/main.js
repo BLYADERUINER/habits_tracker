@@ -88,17 +88,20 @@ const renderContent = (activeHabbit) => {
 
   for (const index in activeHabbit.days) {
     const element = document.createElement('li');
+
+
     element.classList.add('tracker__item');
     element.innerHTML = `
       <h2 class="tracker__day">День ${Number(index) + 1}</h2>
       <p class="tracker__text">${activeHabbit.days[index].comment}</p>
-      <button class="tracker__button-delete"></button>`;
-      page.content.daysContainer.appendChild(element);
+      <button class="tracker__button-delete" onclick="deleteDay(${index})" type="button"></button>`;
+
+
+    page.content.daysContainer.appendChild(element);
   };
 
+
   page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
-
-
 };
 
 
@@ -143,11 +146,30 @@ const addDays = (event) => {
 };
 
 
+
+function deleteDay (index) {
+  habbits = habbits.map(habbit => {
+    if (habbit.id === activeElement) {
+      habbit.days.splice(index, 1);
+      return {
+        ...habbit,
+        days: habbit.days
+      };
+    }
+    return habbit;
+  });
+  rerender(activeElement);
+  saveData();
+};
+
+
+
 habbitForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   addDays(event);
 });
+
 
 
 (() => {
