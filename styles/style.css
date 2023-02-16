@@ -148,7 +148,6 @@
 
 .tracker__button-delete {
   background-image: url(../../../../../image/delete.svg);
-  background-color: transparent;
   width: 25px;
   height: 25px;
   margin-left: auto;
@@ -335,6 +334,10 @@
   padding: 5px;
   margin-bottom: 15px;
   opacity: 0.8;
+}
+
+.popup__input_error {
+  border: 1px solid red;
 }
 
 .popup__title {
