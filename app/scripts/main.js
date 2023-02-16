@@ -1,17 +1,22 @@
 'use strict';
 const HABBIT_KEY = 'HABBIT_KEY';
+
+let activeElement;
 let habbits = [];
 
 const nextDay = document.querySelector('.tracker__day-next');
 const habbitForm = document.querySelector('.tracker__form');
 const addButtonDays = habbitForm.querySelector('.tracker__button-add');
+
 const openPopupButton = document.querySelector('.menu__button-add');
+
 const popup = document.querySelector('.popup');
 const closePopupButton = popup.querySelector('.popup__button-close');
 const popupForm = popup.querySelector('.popup__form');
-let activeElement;
 
 
+
+// object page
 const page = {
   menu: document.querySelector('.menu__list'),
   header: {
@@ -32,7 +37,7 @@ const page = {
 
 
 
-
+// функция получения
 const loadData = () => {
   const habbitsString = localStorage.getItem(HABBIT_KEY);
   const habbitArray = JSON.parse(habbitsString);
@@ -44,12 +49,14 @@ const loadData = () => {
 
 
 
+// функция сохранения в стор
 const saveData = () => {
   localStorage.setItem(HABBIT_KEY, JSON.stringify(habbits));
 };
 
 
 
+// функция рендера меню
 function renderMenu (activeHabbit) {
   for (const habbit of habbits) {
     const existed = document.querySelector(`[habbit-id="${habbit.id}"]`);
@@ -79,6 +86,7 @@ function renderMenu (activeHabbit) {
 
 
 
+// функция рендера шапки
 function renderHead (activeHabbit) {
   page.header.h1.innerText = activeHabbit.name;
   const progress = activeHabbit.days.length / activeHabbit.target > 1
@@ -91,13 +99,12 @@ function renderHead (activeHabbit) {
 
 
 
+// функция рендера контента
 function renderContent (activeHabbit) {
   page.content.daysContainer.innerHTML = '';
 
   for (const index in activeHabbit.days) {
     const element = document.createElement('li');
-
-
     element.classList.add('tracker__item');
     element.innerHTML = `
       <h2 class="tracker__day">День ${Number(index) + 1}</h2>
@@ -108,12 +115,12 @@ function renderContent (activeHabbit) {
     page.content.daysContainer.appendChild(element);
   };
 
-
   page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
 };
 
 
 
+// функция ререндера
 function rerender (activeHabbitId) {
   activeElement = activeHabbitId;
   const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
@@ -132,21 +139,13 @@ function rerender (activeHabbitId) {
 
 
 
+// функция добавления дней
 function addDays (event) {
   const data = validateAndGetFormData(event.target, ['comment']);
   if (!data) {
     return;
   }
 
-
-  // const data = new FormData(event.target);
-  // const comment = data.get('comment');
-
-  // event.target['comment'].classList.remove('tracker__input_error');
-
-  // if (!comment) {
-  //   event.target['comment'].classList.add('tracker__input_error');
-  // }
 
   habbits = habbits.map(item => {
     if (item.id === activeElement) {
@@ -157,6 +156,8 @@ function addDays (event) {
     }
     return item;
   });
+
+
   rerender(activeElement);
   resetForm(event.target, ['comment']);
   saveData();
@@ -164,6 +165,7 @@ function addDays (event) {
 
 
 
+// функция удаления дня
 function deleteDay (index) {
   habbits = habbits.map(habbit => {
     if (habbit.id === activeElement) {
@@ -180,6 +182,8 @@ function deleteDay (index) {
 };
 
 
+
+// функция выбора иконки
 function setIcon (context, icon) {
   page.popup.iconField.value = icon;
   const activeIcon = document.querySelector('.popup__icon-button.popup__icon-button_active');
@@ -188,9 +192,13 @@ function setIcon (context, icon) {
 };
 
 
+
+// функция проверки и получения формы
 function validateAndGetFormData (form, fields) {
   const formData = new FormData(form);
   const res = {};
+
+
   for (const field of fields) {
     const fieldValue = formData.get(field);
     form[field].classList.remove('popup__input_error');
@@ -200,6 +208,7 @@ function validateAndGetFormData (form, fields) {
     res[field] = fieldValue;
   };
 
+
   let isValid = true;
 
   for (const field of fields) {
@@ -207,6 +216,7 @@ function validateAndGetFormData (form, fields) {
       isValid = false;
     }
   };
+
 
   if (!isValid) {
     return;
@@ -216,6 +226,8 @@ function validateAndGetFormData (form, fields) {
 };
 
 
+
+// функция очистки формы
 function resetForm (form, fields) {
   for (const field of fields) {
     form[field].value = '';
@@ -223,14 +235,16 @@ function resetForm (form, fields) {
 };
 
 
+
+// функция добавления привычки
 function addHabbit (event) {
   const data = validateAndGetFormData(event.target, ['name', 'icon', 'target']);
+  const maxId = habbits.reduce((acc, habbit) => acc > habbit.id ? acc : habbit.id, 0);
+
   if (!data) {
     return;
   }
 
-
-  const maxId = habbits.reduce((acc, habbit) => acc > habbit.id ? acc : habbit.id, 0);
   habbits.push({
     id: maxId + 1,
     name: data.name,
@@ -240,12 +254,16 @@ function addHabbit (event) {
   });
 
 
+
   resetForm(event.target, ['name', 'target']);
   saveData();
   rerender(maxId + 1);
+  closePopup();
 };
 
 
+
+// обработчики форм
 habbitForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -257,9 +275,10 @@ popupForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   addHabbit(event);
-  closePopup();
-})
+});
 
+
+// функция переключателя попапа
 // function togglePopup () {
 //   if (page.popup.index.classList.contains('popup_active')) {
 //     page.popup.index.classList.remove('popup_active');
@@ -267,6 +286,8 @@ popupForm.addEventListener('submit', (event) => {
 //     page.popup.index.classList.add('popup_active');
 //   }
 // };
+
+
 
 
 const openedPopup = function () {
@@ -282,11 +303,17 @@ openPopupButton.addEventListener('click', openedPopup);
 closePopupButton.addEventListener('click', closePopup);
 
 
+
+// первоначальный рендер
 (() => {
   loadData();
   const hashId = Number(document.location.hash.replace('#', ''));
   const urlHabbit = habbits.find(habbit => habbit.id === hashId);
-  if (urlHabbit) {
+
+
+  if (!urlHabbit) {
+    return;
+  } else if (urlHabbit) {
     rerender(urlHabbit.id);
   } else {
     rerender(habbits[0].id);
