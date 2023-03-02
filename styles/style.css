@@ -1,5 +1,5 @@
-@import '../../vendor/normalize.css';
-@import '../../vendor/fonts/comfortaa.css';
+@import '../vendor/normalize.css';
+@import '../vendor/fonts/comfortaa.css';
 .popup__title, .popup__icon-list, .popup__icon-button, .tracker__input, .tracker__form, .tracker__list, .tracker__day, .tracker__button-add, .header__text, .header__status, .header__container, .header__title, .content, .app, .menu__icon, .menu__button-item, .menu__button-add {
   margin: 0;
   padding: 0;
@@ -242,7 +242,7 @@
 }
 
 .tracker__button-delete {
-  background-image: url(../../../../../image/delete.svg);
+  background-image: url(../images/delete.svg);
   width: 25px;
   height: 25px;
   margin-left: auto;
@@ -498,7 +498,7 @@
 
 .popup__button-close {
   position: absolute;
-  background-image: url(../../../../../image/close.svg);
+  background-image: url(../images/close.svg);
   background-position: center;
   border: none;
   top: 15px;

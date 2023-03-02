@@ -67,7 +67,7 @@ function renderMenu (activeHabbit) {
       element.setAttribute('habbit-id', habbit.id);
       element.classList.add('menu__button-item');
       element.addEventListener('click', () => rerender(habbit.id));
-      element.innerHTML = `<img class="menu__icon" src="./image/${habbit.icon}.svg" alt="${habbit.name}" />`;
+      element.innerHTML = `<img class="menu__icon" src="./images/${habbit.icon}.svg" alt="${habbit.name}" />`;
       if (activeHabbit.id === habbit.id) {
         element.classList.add('menu__button-item_active');
       }
