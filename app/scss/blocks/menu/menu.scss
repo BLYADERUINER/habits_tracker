@@ -1,5 +1,12 @@
 .menu {
+  position: absolute;
   background-color: #FBFAFF;
   min-height: $min-height;
   padding: 30px;
+}
+
+@include laptopMin {
+  .menu {
+    padding: 15px;
+  }
 }

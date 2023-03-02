@@ -7,3 +7,17 @@
   line-height: 22px;
   margin-left: 35px;
 }
+
+@include laptopMax {
+  .tracker__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@include laptopMin {
+  .tracker__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

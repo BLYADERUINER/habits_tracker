@@ -7,3 +7,31 @@
 
   @extend %extend-margins;
 }
+
+@include desktopMin {
+  .header__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@include laptopMax {
+  .header__title {
+    font-size: 26px;
+    line-height: 29px;
+  }
+}
+
+@include laptopMin {
+  .header__title {
+    font-size: 19px;
+    line-height: 21px;
+  }
+}
+
+@include tablet {
+  .header__title {
+    font-size: 15px;
+    line-height: 17px;
+  }
+}

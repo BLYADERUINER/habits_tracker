@@ -1,4 +1,5 @@
 .app {
+  position: relative;
   display: flex;
   background: $background-color;
   max-width: 1920px;
@@ -6,4 +7,16 @@
   min-height: $min-height;
 
   @extend %extend-margins;
+}
+
+@include desktopMax {
+  .app {
+    max-width: 1600px;
+  }
+}
+
+@include desktopMin {
+  .app {
+    max-width: 1440px;
+  }
 }

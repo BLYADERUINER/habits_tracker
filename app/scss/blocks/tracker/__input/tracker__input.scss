@@ -12,3 +12,12 @@
 
   @extend %extend-margins;
 }
+
+@include laptopMax {
+  .tracker__input {
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}

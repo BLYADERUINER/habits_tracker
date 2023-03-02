@@ -9,9 +9,33 @@
   border-radius: 10px 0 0 10px;
   border: 1px solid $color-blue;
   text-align: center;
-  width: 130px;
+  min-width: 130px;
   height: 50px;
   padding-top: 15px;
 
   @extend %extend-margins;
+}
+
+@include desktopMin {
+  .tracker__day {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@include laptopMax {
+  .tracker__day {
+    min-width: 100px;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: auto;
+  }
+}
+
+@include laptopMin {
+  .tracker__day {
+    min-width: 80px;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }

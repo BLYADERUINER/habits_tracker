@@ -4,3 +4,34 @@
 
   @extend %extend-margins;
 }
+
+
+@include desktopMax {
+  .content {
+    min-width: 1500px;
+  }
+}
+
+@include desktopMin {
+  .content {
+    min-width: 1300px;
+  }
+}
+
+@include laptopMax {
+  .content {
+    min-width: 900px;
+  }
+}
+
+@include laptopMin {
+  .content {
+    min-width: 750px;
+  }
+}
+
+@include tablet {
+  .content {
+    min-width: 600px;
+  }
+}

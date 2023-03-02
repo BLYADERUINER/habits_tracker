@@ -6,3 +6,9 @@
 
   @extend %extend-margins;
 }
+
+@include laptopMin {
+  .header__container {
+    min-width: 190px;
+  }
+}
