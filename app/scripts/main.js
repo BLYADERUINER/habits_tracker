@@ -311,9 +311,7 @@ closePopupButton.addEventListener('click', closePopup);
   const urlHabbit = habbits.find(habbit => habbit.id === hashId);
 
 
-  if (!urlHabbit) {
-    return;
-  } else if (urlHabbit) {
+  if (urlHabbit) {
     rerender(urlHabbit.id);
   } else {
     rerender(habbits[0].id);
