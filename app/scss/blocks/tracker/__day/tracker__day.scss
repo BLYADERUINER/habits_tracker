@@ -46,3 +46,13 @@
     padding-top: 6px;
   }
 }
+
+@include phoneMax {
+  .tracker__day {
+    font-size: 8px;
+    line-height: 10px;
+    padding-top: 7px;
+    min-width: 55px;
+    height: 25px;
+  }
+}

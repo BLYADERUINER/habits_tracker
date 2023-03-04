@@ -2,13 +2,20 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-width: 235px;
+  width: 235px;
 
   @extend %extend-margins;
 }
 
 @include laptopMin {
   .header__container {
-    min-width: 190px;
+    width: 190px;
+  }
+}
+
+@include phoneMax {
+  .header__container {
+    width: 120px;
+    gap: 6px;
   }
 }

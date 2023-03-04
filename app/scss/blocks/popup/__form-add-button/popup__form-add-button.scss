@@ -13,3 +13,19 @@
   opacity: 0.8;
   border: 1px solid #cbcfdd;
 }
+
+@include tablet {
+  .popup__form-add-button {
+    width: 80px;
+    font-size: 12px;
+    height: 30px;
+  }
+}
+
+@include phoneMax {
+  .popup__form-add-button {
+    width: 70px;
+    font-size: 10px;
+    height: 20px;
+  }
+}

@@ -11,3 +11,19 @@
   margin-bottom: 15px;
   opacity: 0.8;
 }
+
+@include tablet {
+  .popup__input {
+    height: 25px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@include phoneMax {
+  .popup__input {
+    height: 20px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

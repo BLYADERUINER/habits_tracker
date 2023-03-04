@@ -2,3 +2,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+@include phoneMax {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

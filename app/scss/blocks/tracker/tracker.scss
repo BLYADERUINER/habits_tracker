@@ -7,3 +7,9 @@
     margin-top: 45px;
   }
 }
+
+@include phoneMax {
+  .tracker {
+    margin-top: 20px;
+  }
+}

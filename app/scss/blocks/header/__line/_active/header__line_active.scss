@@ -5,3 +5,9 @@
 
   @extend %extend-header-line;
 }
+
+@include phoneMax {
+  .header__line_active {
+    height: 2px;
+  }
+}

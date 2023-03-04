@@ -20,3 +20,11 @@
     width: 15px;
   }
 }
+
+@include phoneMax {
+  .tracker__button-delete {
+    background-size: 100%;
+    height: 12px;
+    width: 12px;
+  }
+}

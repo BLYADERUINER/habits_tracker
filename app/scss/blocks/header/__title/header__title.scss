@@ -4,6 +4,9 @@
   font-weight: 400;
   font-size: 35px;
   line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   @extend %extend-margins;
 }
@@ -33,5 +36,12 @@
   .header__title {
     font-size: 15px;
     line-height: 17px;
+  }
+}
+
+@include phoneMax {
+  .header__title {
+    font-size: 10px;
+    line-height: 12px;
   }
 }

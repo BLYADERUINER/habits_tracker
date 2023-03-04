@@ -6,3 +6,17 @@
   line-height: 18px;
   opacity: 0.5;
 }
+
+@include tablet {
+  .popup__icon-lable {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@include phoneMax {
+  .popup__icon-lable {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

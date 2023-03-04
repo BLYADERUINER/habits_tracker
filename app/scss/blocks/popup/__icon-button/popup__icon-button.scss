@@ -18,3 +18,18 @@
 .popup__icon-button:hover img {
   filter: brightness(0) invert(1);
 }
+
+@include tablet {
+  .popup__icon-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
+}
+
+@include phoneMax {
+  .popup__icon-button {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -28,3 +28,10 @@
     line-height: 12px;
   }
 }
+
+@include phoneMax {
+  .tracker__button-add {
+    font-size: 8px;
+    line-height: 10px;
+  }
+}

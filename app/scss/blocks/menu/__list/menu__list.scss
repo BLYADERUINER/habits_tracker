@@ -1,3 +1,9 @@
 .menu__list {
   @extend %extend-navigation-flex;
 }
+
+@include phoneMax {
+  .menu__list {
+    gap: 15px;
+  }
+}

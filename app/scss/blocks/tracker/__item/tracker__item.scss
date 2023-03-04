@@ -12,3 +12,9 @@
     height: 30px;
   }
 }
+
+@include phoneMax {
+  .tracker__item {
+    height: 25px;
+  }
+}

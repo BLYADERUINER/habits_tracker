@@ -12,3 +12,10 @@
     height: 20px;
   }
 }
+
+@include phoneMax {
+  .menu__icon {
+    width: 18px;
+    height: 17px;
+  }
+}

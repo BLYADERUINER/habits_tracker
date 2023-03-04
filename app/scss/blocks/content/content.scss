@@ -36,3 +36,17 @@
     padding: 35px 100px;
   }
 }
+
+@include phoneMax {
+  .content {
+    min-width: 400px;
+    padding: 30px 90px;
+  }
+}
+
+@include phoneMax {
+  .content {
+    min-height: 320px;
+    padding: 30px 80px;
+  }
+}

@@ -9,3 +9,17 @@
   width: 500px;
   height: 400px;
 }
+
+@include tablet {
+  .popup__container {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@include phoneMax {
+  .popup__container {
+    width: 260px;
+    height: 220px;
+  }
+}

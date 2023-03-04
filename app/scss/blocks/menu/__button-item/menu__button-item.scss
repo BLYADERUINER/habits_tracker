@@ -23,3 +23,11 @@
     border-radius: 10px;
   }
 }
+
+@include phoneMax {
+  .menu__button-item {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+}

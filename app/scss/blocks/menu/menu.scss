@@ -16,3 +16,9 @@
     padding: 10px;
   }
 }
+
+@include phoneMax {
+  .menu {
+    padding: 5px;
+  }
+}
