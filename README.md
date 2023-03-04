@@ -11,7 +11,11 @@ Stack: JavaScript, SCSS, HTML, BEM, LocalStorage
 
 ## План Доработки:
 * Рефакторинг
-* Кросс-браузерность
+
+
+## Инструкция:
+- Перед началом работы установить sass: npm install -g sass.
+- Запустить в терминале отслеживание SASS файлов: sass --watch app/scss/style.scss:styles/style.css.
 
 ___
 ###### Ссылка на сайт: https://blyaderuiner.github.io/habits_tracker/
