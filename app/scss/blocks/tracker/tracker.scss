@@ -1,3 +1,9 @@
 .tracker {
   margin-top: 75px;
 }
+
+@include tablet {
+  .tracker {
+    margin-top: 45px;
+  }
+}

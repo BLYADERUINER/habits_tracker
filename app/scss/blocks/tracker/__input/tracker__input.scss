@@ -1,5 +1,5 @@
 .tracker__input {
-  font-family: $font-size-default;
+  font-family: $font-family-default;
   color: $color-default;
   background: #ffffff;
   border: 1px solid #e7ebfb;
@@ -19,5 +19,13 @@
     line-height: 16px;
     margin-left: 25px;
     margin-right: 25px;
+  }
+}
+
+@include tablet {
+  .tracker__input {
+    height: 25px;
+    font-size: 12px;
+    line-height: 14px;
   }
 }

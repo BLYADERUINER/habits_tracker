@@ -1,5 +1,5 @@
 .tracker__day {
-  font-family: $font-size-default;
+  font-family: $font-family-default;
   color: $color-white;
   background-color: $color-blue;
   font-style: normal;
@@ -37,5 +37,12 @@
     min-width: 80px;
     font-size: 12px;
     line-height: 14px;
+  }
+}
+
+@include tablet {
+  .tracker__day {
+    height: 30px;
+    padding-top: 6px;
   }
 }

@@ -1,3 +1,9 @@
 .tracker__day-next {
   margin-top: 20px;
 }
+
+@include tablet {
+  .tracker__day-next {
+    margin-top: 15px;
+  }
+}

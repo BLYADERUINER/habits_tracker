@@ -10,3 +10,11 @@
 .menu__button-add:hover {
   background: #EFF2FF;
 }
+
+@include tablet {
+  .menu__button-add {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
+}

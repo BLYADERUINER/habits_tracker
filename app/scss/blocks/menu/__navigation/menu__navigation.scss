@@ -1,3 +1,9 @@
 .menu__navigation {
   @extend %extend-navigation-flex;
 }
+
+@include tablet {
+  .menu__navigation {
+    gap: 20px;
+  }
+}

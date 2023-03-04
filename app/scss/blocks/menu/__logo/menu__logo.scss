@@ -1,3 +1,11 @@
 .menu__logo {
   margin-bottom: 50px;
 }
+
+@include tablet {
+  .menu__logo {
+    margin-bottom: 30px;
+    width: 45px;
+    height: 45px;
+  }
+}

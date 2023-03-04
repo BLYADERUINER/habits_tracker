@@ -4,3 +4,11 @@
 
   @extend %extend-margins;
 }
+
+
+@include tablet {
+  .menu__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

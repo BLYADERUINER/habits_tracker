@@ -1,5 +1,6 @@
 .tracker__button-delete {
   background-image: $buttonHabbitDelete;
+  background-repeat: no-repeat;
   width: 25px;
   height: 25px;
   margin-left: auto;
@@ -10,4 +11,12 @@
 
 .tracker__button-delete:hover {
   opacity: 0.6;
+}
+
+@include tablet {
+  .tracker__button-delete {
+    background-size: 100%;
+    height: 15px;
+    width: 15px;
+  }
 }

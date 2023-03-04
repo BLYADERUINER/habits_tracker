@@ -15,3 +15,11 @@
 .menu__button-item:hover img {
   filter: brightness(0) invert(1);
 }
+
+@include tablet {
+  .menu__button-item {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
+}

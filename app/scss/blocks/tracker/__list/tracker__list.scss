@@ -6,3 +6,9 @@
 
   @extend %extend-margins;
 }
+
+@include tablet {
+  .tracker__list {
+    gap: 15px;
+  }
+}
